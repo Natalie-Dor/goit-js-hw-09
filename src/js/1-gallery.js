@@ -89,6 +89,7 @@ container.insertAdjacentHTML('beforeend', createMarkUp(images));
 //   instance.show();
 // }
 // ========================================================================
+
 function createMarkUp(arr) {
   return arr
     .map(
@@ -104,3 +105,6 @@ function createMarkUp(arr) {
     )
     .join('');
 }
+// +++++++++++++++++++++++++++++++++=
+let gallery = new SimpleLightbox('.gallery a');
+gallery.on('show.simplelightbox', function () {});
