@@ -18,7 +18,7 @@ function inputData(event) {
   dataForm = { email: email.value.trim(), message: message.value.trim() };
   localStorage.setItem(LOCAL_KEY, JSON.stringify(dataForm));
 }
-function onFormSubmit(event) {
+function formSubmit(event) {
   event.preventDefault();
 
   if (email.value === '' || message.value === '') {
@@ -28,5 +28,5 @@ function onFormSubmit(event) {
   console.log({ email: email.value.trim(), message: message.value.trim() });
   localStorage.removeItem(LOCAL_KEY);
   event.currentTarget.reset();
-  dataForm = {};
+  // dataForm = {};
 }
