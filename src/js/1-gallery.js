@@ -97,12 +97,17 @@ function createMarkUp(arr) {
     <img
       class="gallery-image"
       src="${preview}"
-      data-source="${original}"
       alt="${description}"
-    /></a></li>`
+    />
+    </a>
+    </li>`
     )
     .join('');
 }
 // +++++++++++++++++++++++++++++++++=
-let gallery = new SimpleLightbox('.gallery a');
-gallery.on('show.simplelightbox', function () {});
+let gallery = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionPosition: 'bottom',
+  captionDelay: 250,
+});
+// gallery.on('show.simplelightbox', function () {});
