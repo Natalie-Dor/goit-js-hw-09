@@ -69,23 +69,7 @@ const images = [
 // =====================================================================
 const container = document.querySelector('.gallery');
 container.insertAdjacentHTML('beforeend', createMarkUp(images));
-// container.addEventListener('click', handleModalOpen);
-// ======================================================================
-// function handleModalOpen(event) {
-//   event.preventDefault();
-//   if (event.currentTarget === event.target) return;
-//   const currentImg = event.target.closest(".gallery-item");
-//   console.log(event.target.closest(".gallery-item"));
-//   const currentImgUrl = event.target.dataset.source;
-//   console.log(currentImgUrl);
-//   const instance = basicLightbox.create(`
-//   	<div class="modal">
-//       <img src="${currentImgUrl}">
-//     </div>
-//   `);
 
-//   instance.show();
-// }
 // ========================================================================
 
 function createMarkUp(arr) {
@@ -104,7 +88,7 @@ function createMarkUp(arr) {
     )
     .join('');
 }
-// +++++++++++++++++++++++++++++++++=
+// =======================================================
 let gallery = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionPosition: 'bottom',
